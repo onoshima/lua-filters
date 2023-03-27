@@ -3,7 +3,7 @@ local default_width = "width=0.5\\linewidth"
 local function extract_figinfo(figure)
   local result = {}
   if figure.c[1].c[1].attr.attributes["width"] then
-    result["width"] = figure.c[1].c[1].attr.attributes["width"].."\\linewidth"
+    result["width"] = "width="..figure.c[1].c[1].attr.attributes["width"].."\\linewidth"
   else
     result["width"] = default_width
   end
